@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About | Craig Levinson</title>
+<meta name="description" content="Learn about Craig Levinson's 25-year career in biotechnology and how it shaped Velocity Performance and Wellness, his appointment-based wellness practice in Carmel, Indiana."/>
+<link rel="canonical" href="https://craiglevinson.netlify.app/about.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/style.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  const _sb=supabase.createClient('https://aowblircaymwuymcmllh.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvd2JsaXJjYXltd3V5bWNtbGxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzMzExMjcsImV4cCI6MjA2NzkwNzEyN30.qS7jxVwu83zEYMvxNo7C_2dtVrSZ6wYIFiNtoN69UkQ');
+  const _cid='Craig Levinson';
+  async function loadSBLinks(){
+    const[{data:soc},{data:news}]=await Promise.all([
+      _sb.from('social_media').select('*').eq('client_id',_cid),
+      _sb.from('news_links').select('*').eq('client_id',_cid)
+    ]);
+    const render=(ids,data)=>ids.forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el||!data)return;
+      el.innerHTML='';
+      data.forEach(l=>{
+        const a=document.createElement('a');
+        a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';a.title=l.name;
+        a.innerHTML='<img src="'+l.icon+'" alt="'+l.name+'" style="width:30px;height:30px;border-radius:4px"/>';
+        el.appendChild(a);
+      });
+    });
+    render(['sml-soc-about'],soc);
+    render(['sml-news-about'],news);
+  }
+  document.addEventListener('DOMContentLoaded',loadSBLinks);
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Craig Levinson",
+  "jobTitle": "Founder, Velocity Performance and Wellness",
+  "url": "https://craiglevinson.netlify.app/",
+  "image": "https://craiglevinson.netlify.app/images/hero.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Carmel",
+    "addressRegion": "IN",
+    "addressCountry": "US"
+  },
+  "description": "Craig Levinson is the founder of Velocity Performance and Wellness in Carmel, Indiana, applying 25+ years of biotechnology leadership to personalized, technology-driven wellness."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Craig Levinson",
+  "url": "https://craiglevinson.netlify.app/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Craig Levinson",
+    "url": "https://craiglevinson.netlify.app/"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ══ NAV ═══════════════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Craig<span> Levinson</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a class="active" href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ PAGE HERO ═════════════════════════════════════════════════ -->
+<div class="pg-hero">
+  <p class="eyebrow" style="color:rgba(255,255,255,.55)">Learn More</p>
+  <h1>Craig Levinson</h1>
+  <p class="pg-sub">A 25-year biotechnology career, translated into evidence-based performance and wellness.</p>
+</div>
+
+<!-- ══ PROFILE CARD ══════════════════════════════════════════════ -->
+<div class="pc-wrap">
+  <div class="pc">
+    <div class="pc-ph"><img src="images/hero.jpg" alt="Craig Levinson"/></div>
+    <div>
+      <div class="pc-nm">Craig Levinson</div>
+      <div class="pc-rl">Founder, Velocity Performance and Wellness</div>
+      <div class="pc-lc">Carmel, Indiana</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT SECTIONS + SIDEBAR ══════════════════════════════════ -->
+<div class="am-wrap">
+  <div class="am-inner">
+    <div>
+
+      <div class="csec">
+        <p class="cey">Background</p>
+        <h2>From Enterprise Biotechnology to Velocity</h2>
+        <p>Craig Levinson spent more than twenty-five years in leadership roles across the biotechnology industry, including positions at Cytiva (formerly GE Healthcare Life Sciences), Sigma-Aldrich, Waters Corporation, and Packard Bioscience. That career was defined by complex strategic sales, high-performing team development, and multimillion-dollar portfolio management inside organizations built on evidence, measurement, and rigor.</p>
+        <p>The founding of Velocity Performance and Wellness is best understood as the application of that background rather than a break from it. Levinson did not arrive at wellness through fitness culture or consumer marketing; he arrived through an industry that required data before it accepted a claim, and that origin still shapes how Velocity operates today. The full story is told in <a href="founding-velocity-performance-wellness.html">the founding of Velocity Performance and Wellness</a>.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Philosophy</p>
+        <h2>Intelligent Performance, Not More Exercise</h2>
+        <p>Craig's central philosophy challenges a common assumption in the wellness industry: that more exercise produces better health. Sustainable performance, in his view, comes from precision, not volume, balancing training load, recovery, and stress management against objective measurement.</p>
+        <p>This is why Levinson frames Velocity's mission around healthspan, the duration of healthy, active life, rather than short-term fitness metrics. Clients are guided toward decisions supported by data rather than assumption, an approach drawn directly from his years evaluating evidence in a scientific setting.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Technology</p>
+        <h2>Diagnostics-Driven, Data-Informed Wellness</h2>
+        <p>Velocity Performance and Wellness integrates advanced performance technologies, recovery therapies, and diagnostics into a single, measurable experience. Craig Levinson selects and applies these tools with the same rigor he once brought to evaluating life-science technologies for enterprise portfolios, rather than chasing wellness trends.</p>
+        <p>Personalization at Velocity is data-driven rather than assumption-driven. Diagnostics establish a baseline, technology tracks change over time, and Craig uses those objective benchmarks, not guesswork, to adjust each client's plan. More on how his <a href="biotech-career-shaped-wellness.html">biotech career shaped this approach</a> is available in that article.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Model</p>
+        <h2>Built for the Busy Professional</h2>
+        <p>Velocity's appointment-based model is a deliberate design choice rather than a scheduling convenience. Craig Levinson built the practice around clients who have demanding schedules and need measurable outcomes within constrained time, not open-ended programs.</p>
+        <p>That structure reflects the operational discipline Levinson developed as a life-sciences executive: consultative engagement, clear benchmarks, and efficient use of a client's time. Velocity was built with that same discipline, not the enthusiasm-first approach common to many wellness startups.</p>
+      </div>
+
+      <div class="csec">
+        <p class="cey">Indiana Roots</p>
+        <h2>A Local Voice in Health Technology</h2>
+        <p>Craig Levinson and Velocity Performance and Wellness are rooted in Carmel, Indiana, serving local professionals, health-conscious individuals, and busy executives across the Indianapolis metro area who are looking for measurable wellness outcomes.</p>
+        <p>As the broader wellness industry shifts toward diagnostics, recovery science, and personalized health data, a direction Levinson has been oriented toward professionally for decades, he has positioned himself as a credible, accessible voice in Carmel's emerging health technology landscape. Read more about his approach on the <a href="performance-technology-carmel-indiana.html">performance technology built into Velocity's model</a>.</p>
+      </div>
+
+    </div>
+
+    <aside class="sidebar-facts">
+      <div class="sb-box">
+        <div class="sb-title">Quick Facts</div>
+        <div class="fr"><span class="fl">Name</span><span class="fv">Craig Levinson</span></div>
+        <div class="fr"><span class="fl">Location</span><span class="fv">Carmel, Indiana</span></div>
+        <div class="fr"><span class="fl">Founder Of</span><span class="fv">Velocity Performance and Wellness</span></div>
+        <div class="fr"><span class="fl">Industry Background</span><span class="fv">25+ Years in Biotechnology</span></div>
+        <div class="fr"><span class="fl">Practice Model</span><span class="fv">Appointment-Based</span></div>
+        <div class="fr"><span class="fl">Focus Areas</span><span class="fv">Performance, Recovery & Diagnostics</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ══ SOCIAL + PRESS ACCORDION ══════════════════════════════════ -->
+<div class="acc-section" style="background:var(--off)">
+  <div class="acc-wrap">
+    <button class="acc-btn" onclick="tog(this,'s-about')">Follow Craig Levinson on Social Media <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="s-about"><div id="sml-soc-about" class="social-media-list"></div></div>
+    <button class="acc-btn" onclick="tog(this,'n-about')">Craig Levinson in the Press <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="n-about"><div id="sml-news-about" class="social-media-list"></div></div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Craig Levinson. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+function tog(btn,id){
+  const c=document.getElementById(id),open=c.classList.contains('open');
+  document.querySelectorAll('.acc-body').forEach(e=>e.classList.remove('open'));
+  document.querySelectorAll('.acc-btn').forEach(e=>e.classList.remove('open'));
+  if(!open){c.classList.add('open');btn.classList.add('open');}
+}
+</script>
+</body>
+</html>
